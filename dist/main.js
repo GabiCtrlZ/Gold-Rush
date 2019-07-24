@@ -1,5 +1,5 @@
 const render = new Render()
-const board = new GoldRush(5, 5)
+const board = new GoldRush(10, 10)
 render.renderBoard(board)
 function move(key) {
     switch (key.keyCode) {
@@ -14,6 +14,18 @@ function move(key) {
             break;
         case 40:
             board.movePlayer(1, 'down')
+            break;
+        case 65:
+            board.movePlayer(2, 'left')
+            break;
+        case 87:
+            board.movePlayer(2, 'up')
+            break;
+        case 68:
+            board.movePlayer(2, 'right')
+            break;
+        case 83:
+            board.movePlayer(2, 'down')
     }
     render.renderBoard(board)
 }
