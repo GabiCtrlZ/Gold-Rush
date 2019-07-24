@@ -1,5 +1,6 @@
 const render = new Render()
 const board = new GoldRush(10, 10)
+const ai = new AI()
 render.renderBoard(board)
 function move(key) {
     switch (key.keyCode) {
@@ -30,3 +31,7 @@ function move(key) {
     render.renderBoard(board)
 }
 $('body').on('keydown', move)
+
+setInterval(function(){
+    ai.moveAI(board, render)
+}, 200)
