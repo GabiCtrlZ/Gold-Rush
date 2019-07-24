@@ -1,0 +1,5 @@
+class Render{
+    renderBoard(board){
+        
+    }
+}
