@@ -32,6 +32,16 @@ function move(key) {
 }
 $('body').on('keydown', move)
 
-setInterval(function(){
+function gameOver(){
+    if (!($('.c').length)){
+        return true
+    }
+    else return false
+}
+const interval = setInterval(function(){
     ai.moveAI(board, render)
+    if(gameOver()){
+        clearInterval(interval)
+    }
 }, 200)
+interval
