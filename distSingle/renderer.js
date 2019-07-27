@@ -7,8 +7,8 @@ class Render{
         const html = template({board: board.matrix, score1: board.score['1'], score2: board.score['2']})
         $('#container').append(html)
     }
-    renderEndGame(){
+    renderEndGame(text){
         $('.end').remove()
-        $('body').append(`<div class='end'>Game Over</div>`)
+        $('body').append(`<div class='end'>Game Over ${text}</div>`)
     }
 }
