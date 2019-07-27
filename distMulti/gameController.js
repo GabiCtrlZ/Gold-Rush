@@ -30,9 +30,8 @@ class GameController {
         }
     }
     
-    endGame(render, interval) {
+    endGame(render) {
         if (this.gameOver()) {
-            clearInterval(interval)
             render.renderEndGame()
         }
     }
