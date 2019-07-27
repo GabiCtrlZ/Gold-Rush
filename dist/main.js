@@ -1,7 +1,21 @@
+let board
+let ai
+$('button').on('click', function () {
+    const inputX = $('#x-size').val()
+    const inputY = $('#y-size').val()
+    board = new GoldRush(inputX, inputY)
+    ai = new AI()
+    render.renderBoard(board)
+    const interval = setInterval(function () {
+        ai.moveAI(board, render)
+        if (gameOver()) {
+            clearInterval(interval)
+        }
+    }, 200)
+    interval
+    $('#kill-container').empty()
+})
 const render = new Render()
-const board = new GoldRush(10, 10)
-const ai = new AI()
-render.renderBoard(board)
 function move(key) {
     switch (key.keyCode) {
         case 37:
@@ -32,16 +46,9 @@ function move(key) {
 }
 $('body').on('keydown', move)
 
-function gameOver(){
-    if (!($('.c').length)){
+function gameOver() {
+    if (!($('.c').length)) {
         return true
     }
     else return false
 }
-const interval = setInterval(function(){
-    ai.moveAI(board, render)
-    if(gameOver()){
-        clearInterval(interval)
-    }
-}, 200)
-interval
