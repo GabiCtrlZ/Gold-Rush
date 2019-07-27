@@ -21,7 +21,7 @@ class AI {
             case 'b':
                 return -10
             case '1':
-                return -10
+                return -100
             case 'c':
                 return 100
             default:
