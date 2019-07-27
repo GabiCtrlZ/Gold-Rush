@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="container"></div>
+  <div id="kill-container">
+    <input type="text" id="x-size" placeholder="enter X size">
+    <input type="text" id="y-size" placeholder="enter Y size">
+    <button>Start</button>
+  </div>
+</body>
+<script id="template" type="text/x-handlebars-template">
+    {{#each board}}
+    <div>
+        {{#each this}}
+        <span class="{{this}}"></span>
+        {{/each}}
+    </div>
+    {{/each}}
+    <div>Player 1: <p>{{score1}}</p></div>
+    <div>Player 2: <p>{{score2}}</p></div>
+  </script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
+<script src="./matrix.js"></script>
+<script src="./goldRush.js"></script>
+<script src="./renderer.js"></script>
+<script src="./AI.js"></script>
+<script src="./gameController.js"></script>
+<script src="./main.js"></script>
+
+</html>

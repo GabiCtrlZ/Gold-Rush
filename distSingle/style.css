@@ -1,0 +1,40 @@
+body{
+    z-index: 0;
+}
+span{
+    width: 107px;
+    height: 50px;
+    margin: 0.5px;
+    border: 1px solid black;
+    display: inline-block;
+}
+.c{
+    background-image: url('./pics/Coin.png');
+    background-size: cover;
+}
+.b{
+    background-color: brown;
+}
+.a{
+    background-color: white;
+}
+[class='1']{
+    background-image: url('./pics/blue.png');
+    background-size: cover;
+}
+[class='2']{
+    background-image: url('./pics/Red.png');
+    background-size: cover;
+}
+.end{
+    position: absolute;
+    z-index: 1;
+    width: 1070px;
+    height: 500px;
+    left: 5%;
+    top: 5%;
+    background-color: azure;
+    border: 1px solid black;
+    align-content: center;
+    font-size: 200px;
+}
