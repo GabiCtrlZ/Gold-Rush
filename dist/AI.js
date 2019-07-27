@@ -6,13 +6,14 @@ class AI {
         return board.findCoordinate('2')
     }
     getWorth(board, pos) {
-        console.log(pos)
         if (pos.x > 9 || pos.x < 0){
             return -10
         }
         const char = board.matrix[pos.x][pos.y]
         if (this.beenAt.some(x => x.x == pos.x && x.y == pos.y)) {
-            return 5
+            let counter = 0
+            this.beenAt.forEach(x => { if(x.x == pos.x && x.y ==pos.y){counter++}})
+            return 9/counter
         }
         switch (char) {
             case 'a':
