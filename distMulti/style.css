@@ -1,7 +1,7 @@
-body{
+body {
     z-index: 0;
     background-image: url('./pics/BrickWall.png');
-    color: #fff; 
+    color: #fff;
     position: relative;
     height: 100%;
     background-position: center;
@@ -9,47 +9,92 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    display:grid;
+    display: grid;
     justify-items: center;
     align-items: center;
     font-family: 'DM Serif Text', serif;
     font-family: 'Open Sans', sans-serif;
 }
-span{
+#container{
+    background-color: #00000098;
+    padding: 5px;
+}
+
+span {
     width: 107px;
     height: 50px;
     border: 1px solid black;
     display: inline-block;
 }
-.c{
+
+.c {
     background-image: url('./pics/Coin.png');
     background-size: cover;
 }
-.b{
+
+.b {
     background-image: url('./pics/Brick.png');
     background-size: cover;
 }
-.a{
+
+.a {
     background-color: white;
 }
-[class='1']{
+
+[class='1'] {
     background-image: url('./pics/blue.png');
     background-size: cover;
 }
-[class='2']{
+
+[class='2'] {
     background-image: url('./pics/Red.png');
     background-size: cover;
 }
-.end{
+
+.end {
     position: absolute;
     z-index: 1;
     width: 1070px;
     height: 500px;
     top: 100px;
     color: black;
-    background-color: azure;
+    background-color: rgba(240, 255, 255, 0.705);
     border: 1px solid black;
     align-content: center;
     font-size: 180px;
     visibility: visible;
+}
+
+input, button{
+    width: 150px;
+    height: 40px;
+    position: relative;
+    background-color: transparent;
+    border: 2px solid;
+    border-radius: 50px;
+    font-family: 'Open Sans';
+    text-align: center;
+    font-weight: 400;
+    font-size: 60px;
+    overflow: hidden;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Impact;
+    font-size: 20px;
+    font-style: oblique;
+    font-variant: normal;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    background-image: linear-gradient(to top, #f5f762 0%, #fbfe51 100%);
+}
+button{
+    cursor: pointer;
+}
+
+::placeholder {
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+    font-family: 'Open Sans';
+    text-align: center;
 }
