@@ -91,6 +91,14 @@ input, button{
 button{
     cursor: pointer;
 }
+input:hover{
+    background-image: linear-gradient(to top, #fff1b3 0%, #fff2a8 100%);
+}
+button:hover{
+    color: #f5f762;
+    border: 2px solid #747522;
+    background-image: linear-gradient(to top, #313030 0%, #4b4b4b 100%);
+}
 
 ::placeholder {
     color: rgb(0, 0, 0);
