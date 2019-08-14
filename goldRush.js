@@ -1,3 +1,5 @@
+const Matrix = require('./matrix')
+
 class GoldRush extends Matrix {
     constructor(x, y) {
         super(x, y)
@@ -94,3 +96,5 @@ class GoldRush extends Matrix {
         }
     }
 }
+
+module.exports = GoldRush
