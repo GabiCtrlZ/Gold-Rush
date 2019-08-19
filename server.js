@@ -14,7 +14,7 @@ app.use('/Single', express.static(path.join(__dirname, 'distSingle')))
 app.use('/Multi', express.static(path.join(__dirname, 'distMulti')))
 
 //Server listens
-const server = app.listen(port, function () {
+const server = app.listen(process.env.PORT || port, function () {
     console.log('server on port ' + port)
 })
 

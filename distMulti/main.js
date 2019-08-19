@@ -3,7 +3,7 @@ const render = new Render()
 const gameController = new GameController()
 
 //Make connections
-const socket = io.connect('https://barba.serveo.net')
+const socket = io.connect('http://localhost:3000')
 
 $('button').on('click', async function () {
     const inputX = $('#x-size').val()
